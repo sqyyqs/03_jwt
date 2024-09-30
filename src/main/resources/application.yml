@@ -1,0 +1,21 @@
+spring:
+  sql:
+    init:
+      mode: always
+  application:
+    name: 03_jwt
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          authorities-claim-name: authorities
+          jws-algorithms: ES512
+          enc-algorithm: A256GCMKW
+          enc-method: A256GCM
+          secret-key: jPjt23t1MzcaDJZ2EwS4cnEmUCaBGCKKAcEU2fRVkvA=
+          private-key: '{"kty":"EC","d":"ALIzpp1nPVIhAuXN8Mz--7XBWKFJZUS7LUCT3NKhQFZr_SYW_Qcaoe4nyjeDeB1hC6JCbaE0WUEddryj47Vz3BZP","crv":"P-521","x":"ALEvU65fsWAQ3toQR7JFWT85BiViX-HfKeocCSaSZtbQMwJgxFEbcY_Lqxyxjgj6IqheKhgpr3cbAMGCJqm1hDFA","y":"AcgwzoZU7ed0wgEBpOjvr3PejjfFjoDjpLk3KIeSze3pLF76MeHzIp-RTtLMSmL02mGauPkCOHfbpP_NL2s__OnB"}'
+          authority-prefix: ''
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgrespw
